@@ -12,6 +12,21 @@
         <h1>Hello world we are going to learn a simple clock</h1>
         <h2 id="res"></h2>
     </div>
-    <script></script>
+    <script>
+
+        function clock() {
+            var timer = {
+                date:new Date()
+            }
+            function tick(){
+                timer.date = new Date();
+            }
+            document.getElementById('res').innerText = timer.date.toLocaleTimeString()
+
+        }
+
+        clock();
+        setInterval(clock,1000)
+    </script>
 </body>
 </html>
